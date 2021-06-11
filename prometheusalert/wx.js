@@ -5,7 +5,6 @@ exports.template = function(body) {
     var content = alerts.map(
         alert => {
             return ["------------------------------"]
-            .join("\n")
             .concat("##            告警来了")
             .concat("------------------------------")
             .concat(`### 告警名称:${alert.labels.alertname}`)
@@ -16,8 +15,8 @@ exports.template = function(body) {
             .concat(`### 结果:${alert.annotations.summary}`)
             .concat(`### 开始时间:${body.startsAt}`)
             .concat(`### 结束时间:${body.endsAt}`)
-            .join("\n")
             .concat("------------------------------")
+            .join("\n")
         }
     );
     return {
