@@ -7,6 +7,7 @@ exports.template = function(body) {
         alert => {
             if ((alert.labels.alertname).search("内存使用率") != -1){
                 noticeMem.push("18318851403");
+                noticeMem.push("13500000000")
             }
             if (body.status == 'firing'){
                 return ["------------------------------"]
@@ -50,7 +51,7 @@ exports.template = function(body) {
         msgtype: "markdown",
         markdown: {
             content: content,
-            mentioned_mobile_list: noticeMem
+            mentioned_mobile_list: ["@all"]
         }
     }
 }
