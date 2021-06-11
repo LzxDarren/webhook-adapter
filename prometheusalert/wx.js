@@ -4,8 +4,8 @@ exports.template = function(body) {
     var alerts = body.alerts;
     var content = alerts.map(
         alert => {
-            return ["------------------------------"]
-            /*.concat("##            告警来了")
+            /*return ["------------------------------"]
+            .concat("##            告警来了")
             .concat("------------------------------")
             .concat(`### 告警名称:${alert.labels.alertname}`)
             .concat(`### 状态:<font color="${body.status === 'firing' ? 'warning' : 'info'}">${body.status}</font>`)
@@ -17,6 +17,11 @@ exports.template = function(body) {
             .concat(`### 结束时间:${body.endsAt}`)
             .concat("------------------------------")
             .join("\n")*/
+            return [`# Name:${alert.labels.alertname}`, "## Labels:"]
+            .concat(Object.entries(alert.labels).map(label => `<font color="comment">${label[0]}:</font>${label[1]}`))
+            .concat("## Annotations:")
+            .concat(Object.entries(alert.annotations).map(annotation => `<font color="comment">${annotation[0]}:</font>${annotation[1]}`))
+            .join("\n")
         }
     )
     return {
