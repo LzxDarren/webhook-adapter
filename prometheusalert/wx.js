@@ -18,12 +18,13 @@ exports.template = function(body) {
             .concat("------------------------------")
             .join("\n")
         }
-    );
+    )
     return {
         
         msgtype: "markdown",
         markdown: {
             content: content
+            debug=1
         }
     }
 }
