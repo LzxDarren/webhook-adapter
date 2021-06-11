@@ -5,8 +5,8 @@ exports.template = function(body) {
     var noticeMem = [];
     var content = alerts.map(
         alert => {
-            if (alert.labels.alertname.indexOf("内存使用率") != -1){
-                noticeMem.concat("18318851403")
+            if ((alert.labels.alertname).search("内存使用率") != -1){
+                noticeMem.push("18318851403");
             }
             if (body.status == 'firing'){
                 return ["------------------------------"]
