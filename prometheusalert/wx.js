@@ -4,13 +4,22 @@ exports.template = function(body) {
     var alerts = body.alerts;
     var content = alerts.map(
         alert => {
-            return [`# Name:${alert.labels.alertname}`, "## Labels:"]
-            .concat(Object.entries(alert.labels).map(label => `<font color="comment">${label[0]}:</font>${label[1]}`))
-            .concat("## Annotations:")
-            .concat(Object.entries(alert.annotations).map(annotation => `<font color="comment">${annotation[0]}:</font>${annotation[1]}`))
+            return ["------------------------------"]
             .join("\n")
+            .concat("##            告警来了")
+            .concat("------------------------------")
+            .concat(`### 告警名称:${alert.labels.alertname}`)
+            .concat(`### 状态:<font color="${body.status === 'firing' ? 'warning' : 'info'}">${body.status}</font>`).join("\n\n")
+            .concat(`### 告警实例:${alert.labels.instance}`)
+            .concat(`### 告警等级:${alert.labels.severity}`)
+            .concat(`### 告警描述:${alert.annotations.description}`)
+            .concat(`### 结果:${alert.annotations.summary}`)
+            .concat(`### 开始时间:${body.startsAt}`)
+            .concat(`### 结束时间:${body.endsAt}`)
+            .join("\n")
+            .concat("------------------------------")
         }
-    ).concat(`<font color="comment">Status:</font><font color="${body.status === 'firing' ? 'warning' : 'info'}">${body.status}</font>`).join("\n\n");
+    );
     return {
         
         msgtype: "markdown",
