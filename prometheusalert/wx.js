@@ -8,7 +8,7 @@ exports.template = function(body) {
             .concat("##            告警来了")
             .concat("------------------------------")
             .concat(`### 告警名称:${alert.labels.alertname}`)
-            .concat(`### 状态:<font color="${body.status === 'firing' ? 'warning' : 'info'}">${body.status}</font>`).join("\n\n")
+            .concat(`### 状态:<font color="${body.status === 'firing' ? 'warning' : 'info'}">${body.status}</font>`)
             .concat(`### 告警实例:${alert.labels.instance}`)
             .concat(`### 告警等级:${alert.labels.severity}`)
             .concat(`### 告警描述:${alert.annotations.description}`)
