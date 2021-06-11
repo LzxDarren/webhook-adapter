@@ -24,7 +24,6 @@ exports.template = function(body) {
         msgtype: "markdown",
         markdown: {
             content: content
-            debug=1
         }
     }
 }
