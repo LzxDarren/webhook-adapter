@@ -23,7 +23,7 @@ exports.template = function(body) {
             .concat(Object.entries(alert.annotations).map(annotation => `<font color="comment">${annotation[0]}:</font>${annotation[1]}`))
             .join("\n")
         }
-    )
+    ).join("\n\n");
     return {
         
         msgtype: "markdown",
