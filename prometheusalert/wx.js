@@ -5,6 +5,9 @@ exports.template = function(body) {
     var noticeMem = [];
     var content = alerts.map(
         alert => {
+            if (alert.labels.alertname.indexOf("内存使用率") != -1){
+                noticeMem.concat("18318851403")
+            }
             if (body.status == 'firing'){
                 return ["------------------------------"]
                 .concat("##            告警来了")
@@ -46,7 +49,8 @@ exports.template = function(body) {
         
         msgtype: "markdown",
         markdown: {
-            content: content
+            content: content,
+            mentioned_mobile_list: noticeMem
         }
     }
 }
