@@ -52,8 +52,8 @@ exports.template = function(body) {
         
         msgtype: "markdown",
         markdown: {
-            content: content,
-            mentioned_list:["lizexin","@all"]
+            "content": content,
+            "mentioned_list": ["lizexin","@all"]
         }
     }
 }
