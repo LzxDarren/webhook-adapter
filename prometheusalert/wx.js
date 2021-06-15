@@ -51,7 +51,7 @@ exports.template = function(body) {
         msgtype: "markdown",
         markdown: {
             content: content,
-            mentioned_mobile_list:[noticeMem]
+            mentioned_mobile_list:["18318851403"]
         }
     }
 }
