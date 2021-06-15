@@ -43,7 +43,7 @@ settings.forEach(
                         method: "POST",
                         body: JSON.stringify(e.template(req.body)),
                         headers: {
-                            'Content-Type': "application/json"
+                            'Content-Type': "application/json;charset=utf-8"
                         }
 
                     }).then(
