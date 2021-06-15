@@ -1,5 +1,4 @@
 exports.template = function(body) {
-    //企业微信群机器人API，https://work.weixin.qq.com/help?person_id=1&doc_id=13376#markdown%E7%B1%BB%E5%9E%8B
     //prometheus alert manager webhook ： https://prometheus.io/docs/alerting/configuration/#webhook_config
     var alerts = body.alerts;
     var noticeMem = [];
