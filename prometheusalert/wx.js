@@ -53,7 +53,7 @@ exports.template = function(body) {
         msgtype: "markdown",
         markdown: {
             content: content,
-            mentioned_mobile_list:["@all"]
+            mentioned_list:["18318851403"]
         }
     }
 }
