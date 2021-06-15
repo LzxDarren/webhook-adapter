@@ -5,7 +5,11 @@ exports.template = function(body) {
     var noticeMem = [];
     var content = alerts.map(
         alert => {
-            if ((alert.labels.alertname).search("内存使用率") != -1){
+            if ((alert.labels.alertname).search("f0132618") != -1){
+                noticeMem.push("15879433425");
+            }else if ((alert.labels.alertname).search("f0409069") != -1){
+                noticeMem.push("15879433425");
+            }else if ((alert.labels.alertname).search("f0747617")){
                 noticeMem.push("18318851403");
             }
             if (body.status == 'firing'){
@@ -16,7 +20,6 @@ exports.template = function(body) {
                 .concat(`状态:${body.status}`)
                 .concat(`告警实例:${alert.labels.instance}`)
                 .concat(`告警等级:${alert.labels.severity}`)
-                .concat(`告警描述:${alert.annotations.description}`)
                 .concat(`结果:${alert.annotations.summary}`)
                 .concat(`开始时间:${alert.startsAt}`)
                 .concat("------------------------------")
@@ -35,7 +38,6 @@ exports.template = function(body) {
                 .concat(`状态:${body.status}`)
                 .concat(`告警实例:${alert.labels.instance}`)
                 .concat(`告警等级:${alert.labels.severity}`)
-                .concat(`告警描述:${alert.annotations.description}`)
                 .concat(`结果:${alert.annotations.summary}`)
                 .concat(`开始时间:${alert.startsAt}`)
                 .concat(`结束时间:${alert.endsAt}`)
@@ -46,7 +48,6 @@ exports.template = function(body) {
         }
     ).join("\n\n");
     return {
-        
         msgtype: "text",
         text: {
             "content": content,
