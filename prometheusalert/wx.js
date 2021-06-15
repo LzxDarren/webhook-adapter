@@ -12,8 +12,8 @@ exports.template = function(body) {
                 return ["------------------------------"]
                 .concat("            告警来了")
                 .concat("------------------------------")
-                .concat(`告警名称:${alert.labels.alertname} ${noticeMem}`)
-                .concat(`状态:${body.status}</font>`)
+                .concat(`告警名称:${alert.labels.alertname}`)
+                .concat(`状态:${body.status}`)
                 .concat(`告警实例:${alert.labels.instance}`)
                 .concat(`告警等级:${alert.labels.severity}`)
                 .concat(`告警描述:${alert.annotations.description}`)
@@ -32,7 +32,7 @@ exports.template = function(body) {
                 .concat("            告警恢复")
                 .concat("------------------------------")
                 .concat(`告警名称:${alert.labels.alertname}`)
-                .concat(`状态:<font color="${body.status === 'firing' ? 'warning' : 'info'}">${body.status}</font>`)
+                .concat(`状态:${body.status}`)
                 .concat(`告警实例:${alert.labels.instance}`)
                 .concat(`告警等级:${alert.labels.severity}`)
                 .concat(`告警描述:${alert.annotations.description}`)
@@ -50,7 +50,7 @@ exports.template = function(body) {
         msgtype: "text",
         text: {
             "content": content,
-            "mentioned_mobile_list": ["18318851403","@all"]
+            "mentioned_mobile_list": noticeMem
         }
     }
 }
