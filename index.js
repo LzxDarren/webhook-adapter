@@ -38,6 +38,8 @@ settings.forEach(
                 }
                 var to = e.signUrl(e.to);
                 console.debug(`${req.url}=>${to}`);
+                var ttt=JSON.stringify(e.template(req.body))
+                console.log(`tttttttttttt ${ttt}`)
                 fetch(to,
                     {
                         method: "POST",
@@ -59,6 +61,4 @@ settings.forEach(
         )
     }
 )
-ttt=JSON.stringify(e.template(req.body))
-console.log(`tttttttttttt ${ttt}`)
 app.listen(port);
