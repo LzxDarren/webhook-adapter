@@ -21,6 +21,7 @@ exports.template = function(body) {
                 .concat(`### 结果:${alert.annotations.summary}`)
                 .concat(`### 开始时间:${alert.startsAt}`)
                 .concat("------------------------------")
+                .concat("@所有人")
                 .join("\n")
             }
                 /*return [`# Name:${alert.labels.alertname}`, "## Labels:"]
