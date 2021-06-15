@@ -41,6 +41,7 @@ exports.template = function(body) {
                 .concat(`### 开始时间:${alert.startsAt}`)
                 .concat(`### 结束时间:${alert.endsAt}`)
                 .concat("------------------------------")
+                .concat("@所有人")
                 .join("\n")
             }
             
