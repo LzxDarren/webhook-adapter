@@ -7,21 +7,19 @@ exports.template = function(body) {
         alert => {
             if ((alert.labels.alertname).search("内存使用率") != -1){
                 noticeMem.push("18318851403");
-                noticeMem.push("13500000000")
             }
             if (body.status == 'firing'){
                 return ["------------------------------"]
-                .concat("##            告警来了")
+                .concat("            告警来了")
                 .concat("------------------------------")
-                .concat(`### 告警名称:${alert.labels.alertname} ${noticeMem}`)
-                .concat(`### 状态:<font color="${body.status === 'firing' ? 'warning' : 'info'}">${body.status}</font>`)
-                .concat(`### 告警实例:${alert.labels.instance}`)
-                .concat(`### 告警等级:${alert.labels.severity}`)
-                .concat(`### 告警描述:${alert.annotations.description}`)
-                .concat(`### 结果:${alert.annotations.summary}`)
-                .concat(`### 开始时间:${alert.startsAt}`)
+                .concat(`告警名称:${alert.labels.alertname} ${noticeMem}`)
+                .concat(`状态:${body.status}</font>`)
+                .concat(`告警实例:${alert.labels.instance}`)
+                .concat(`告警等级:${alert.labels.severity}`)
+                .concat(`告警描述:${alert.annotations.description}`)
+                .concat(`结果:${alert.annotations.summary}`)
+                .concat(`开始时间:${alert.startsAt}`)
                 .concat("------------------------------")
-                .concat("@all")
                 .join("\n")
             }
                 /*return [`# Name:${alert.labels.alertname}`, "## Labels:"]
@@ -31,18 +29,17 @@ exports.template = function(body) {
                 .join("\n")*/
             if (body.status == 'resolved'){
                 return ["------------------------------"]
-                .concat("##            告警恢复")
+                .concat("            告警恢复")
                 .concat("------------------------------")
-                .concat(`### 告警名称:${alert.labels.alertname}`)
-                .concat(`### 状态:<font color="${body.status === 'firing' ? 'warning' : 'info'}">${body.status}</font>`)
-                .concat(`### 告警实例:${alert.labels.instance}`)
-                .concat(`### 告警等级:${alert.labels.severity}`)
-                .concat(`### 告警描述:${alert.annotations.description}`)
-                .concat(`### 结果:${alert.annotations.summary}`)
-                .concat(`### 开始时间:${alert.startsAt}`)
-                .concat(`### 结束时间:${alert.endsAt}`)
+                .concat(`告警名称:${alert.labels.alertname}`)
+                .concat(`状态:<font color="${body.status === 'firing' ? 'warning' : 'info'}">${body.status}</font>`)
+                .concat(`告警实例:${alert.labels.instance}`)
+                .concat(`告警等级:${alert.labels.severity}`)
+                .concat(`告警描述:${alert.annotations.description}`)
+                .concat(`结果:${alert.annotations.summary}`)
+                .concat(`开始时间:${alert.startsAt}`)
+                .concat(`结束时间:${alert.endsAt}`)
                 .concat("------------------------------")
-                .concat("@所有人")
                 .join("\n")
             }
             
@@ -50,10 +47,10 @@ exports.template = function(body) {
     ).join("\n\n");
     return {
         
-        msgtype: "markdown",
-        markdown: {
+        msgtype: "text",
+        text: {
             "content": content,
-            "mentioned_list": ["lizexin","@all"]
+            "mentioned_mobile_list": ["18318851403","@all"]
         }
     }
 }
