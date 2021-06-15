@@ -21,7 +21,7 @@ exports.template = function(body) {
                 .concat(`### 结果:${alert.annotations.summary}`)
                 .concat(`### 开始时间:${alert.startsAt}`)
                 .concat("------------------------------")
-                .concat("@所有人")
+                .concat("@all")
                 .join("\n")
             }
                 /*return [`# Name:${alert.labels.alertname}`, "## Labels:"]
@@ -53,7 +53,7 @@ exports.template = function(body) {
         msgtype: "markdown",
         markdown: {
             content: content,
-            mentioned_mobile_list:["18318851403"]
+            mentioned_mobile_list:["@all"]
         }
     }
 }
