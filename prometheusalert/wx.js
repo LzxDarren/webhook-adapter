@@ -53,7 +53,7 @@ exports.template = function(body) {
         msgtype: "markdown",
         markdown: {
             content: content,
-            mentioned_list:["李泽鑫"]
+            mentioned_list:["lizexin","@all"]
         }
     }
 }
