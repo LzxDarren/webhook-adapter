@@ -38,7 +38,8 @@ settings.push(
         to: noflag.substring(index2 + 1),
         template: js.template,
         signUrl: js.signUrl || (url => url)
-    };
+    }
+);
 var app = express();
 app.use(bodyParser.json());
 settings.forEach(
