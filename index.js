@@ -4,7 +4,8 @@ var bodyParser = require('body-parser');
 var argv = process.argv.slice(2);
 var port = 8080;
 const PORT_FLAG = "--port=";
-const ADAPTER_FLAG = "adapter=";
+//const ADAPTER_FLAG = "--adapter=";
+var ADAPTER_FLAG = process.env.adapter;
 var settings = [];
 argv.forEach(arg => {
     if (arg.startsWith(PORT_FLAG)) {
