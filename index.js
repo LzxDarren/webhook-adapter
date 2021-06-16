@@ -13,7 +13,7 @@ argv.forEach(arg => {
         port = parseInt(arg.substr(PORT_FLAG.length));
         return;
     }
-    if (arg.startsWith(ADAPTER_FLAG)) {
+/*    if (arg.startsWith(ADAPTER_FLAG)) {
         var noflag = arg.substr(ADAPTER_FLAG.length)
         var index1 = noflag.indexOf('=');
         var index2 = noflag.indexOf('=', index1 + 1)
@@ -26,7 +26,7 @@ argv.forEach(arg => {
                 signUrl: js.signUrl || (url => url)
             }
         );
-    }
+    }*/
 });
 var noflag = ADAPTER_FLAG;
 var index1 = noflag.indexOf('=');
