@@ -2,7 +2,7 @@ var express = require("express");
 var fetch = require("node-fetch");
 var bodyParser = require('body-parser');
 var argv = process.argv.slice(2);
-console.log(`${argv}`)
+console.log(`111111111111${argv}`)
 var port = 8080;
 const PORT_FLAG = "--port=";
 //const ADAPTER_FLAG = "--adapter=";
