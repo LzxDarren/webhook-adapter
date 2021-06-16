@@ -11,6 +11,10 @@ exports.template = function(body) {
                 noticeMem.push("15879433425");
             }else if ((alert.labels.alertname).search("f0747617")){
                 noticeMem.push("18318851403");
+            }else if ((alert.labels.alertname).search("f0463143") != -1){
+                noticeMem.push("15879433425");
+            }else if ((alert.labels.alertname).search("f020315") != -1){
+                noticeMem.push("19520526881");
             }
             if (body.status == 'firing'){
                 return ["------------------------------"]
