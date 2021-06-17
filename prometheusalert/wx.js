@@ -9,7 +9,7 @@ exports.template = function(body) {
                 noticeMem.push("15879433425");
             }else if ((alert.labels.alertname).search("f0409069") != -1){
                 noticeMem.push("15879433425");
-            }else if ((alert.labels.alertname).search("f0747617")){
+            }else if ((alert.labels.alertname).search("f0747617") != -1){
                 noticeMem.push("18318851403");
             }else if ((alert.labels.alertname).search("f0463143") != -1){
                 noticeMem.push("15879433425");
