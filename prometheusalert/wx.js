@@ -15,9 +15,6 @@ exports.template = function(body) {
                 noticeMem.push("15879433425");
             }else if ((alert.labels.alertname).search("f020315") != -1){
                 noticeMem.push("19520526881");
-            }else if ((alert.labels.alertname).search("内存使用率") != -1){
-                noticeMem.push("18318851403");
-                noticeMem.push("18318851403");
             }
             if (body.status == 'firing'){
                 return ["------------------------------"]
