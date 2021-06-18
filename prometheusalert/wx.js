@@ -55,7 +55,7 @@ exports.template = function(body) {
         msgtype: "text",
         text: {
             "content": content,
-            "mentioned_mobile_list": noticeMem
+            "mentioned_mobile_list": [...new Set(noticeMem)]
         }
     }
 }
