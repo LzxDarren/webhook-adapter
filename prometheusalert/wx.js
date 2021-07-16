@@ -27,6 +27,7 @@ exports.template = function(body) {
                 .concat(`结果:${alert.annotations.summary}`)
                 .concat(`开始时间:${alert.startsAt}`)
                 .concat("------------------------------")
+                .concat("\n <@18318851403>")
                 .join("\n")
             }
                 /*return [`# Name:${alert.labels.alertname}`, "## Labels:"]
@@ -46,7 +47,7 @@ exports.template = function(body) {
                 .concat(`开始时间:${alert.startsAt}`)
                 .concat(`结束时间:${alert.endsAt}`)
                 .concat("------------------------------")
-                .join("\n")
+                .join("\n \n<@18318851403>")
             }
             
         }
@@ -54,7 +55,7 @@ exports.template = function(body) {
     return {
         msgtype: "markdown",
         text: {
-            "content": content+"\n<@18318851403>"
+            "content": content
             //"mentioned_mobile_list": [...new Set(noticeMem)]
         }
     }
