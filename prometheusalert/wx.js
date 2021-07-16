@@ -52,10 +52,10 @@ exports.template = function(body) {
         }
     ).join("\n\n");
     return {
-        msgtype: "text",
+        msgtype: "markdown",
         text: {
-            "content": content,
-            "mentioned_mobile_list": [...new Set(noticeMem)]
+            "content": content+"\n<@18318851403>"
+            //"mentioned_mobile_list": [...new Set(noticeMem)]
         }
     }
 }
