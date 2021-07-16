@@ -27,7 +27,7 @@ exports.template = function(body) {
                 .concat(`结果:${alert.annotations.summary}`)
                 .concat(`开始时间:${alert.startsAt}`)
                 .concat("------------------------------")
-                .concat("\n <@18318851403>")
+                .concat("\n <@李泽鑫>")
                 .join("\n")
             }
                 /*return [`# Name:${alert.labels.alertname}`, "## Labels:"]
