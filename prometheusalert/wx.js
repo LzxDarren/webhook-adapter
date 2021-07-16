@@ -15,6 +15,10 @@ exports.template = function(body) {
                 noticeMem.push("15879433425");
             }else if ((alert.labels.alertname).search("f020315") != -1){
                 noticeMem.push("19520526881");
+            }else if ((alert.labels.alertname).search("f087530") != -1){
+                noticeMem.push("15879433425");
+            }else if ((alert.labels.alertname).search("f0154039") != -1){
+                noticeMem.push("15879433425");
             }
             if (body.status == 'firing'){
                 return ["------------------------------"]
@@ -27,7 +31,6 @@ exports.template = function(body) {
                 .concat(`结果:${alert.annotations.summary}`)
                 .concat(`开始时间:${alert.startsAt}`)
                 .concat("------------------------------")
-                .concat("\n <@李泽鑫>")
                 .join("\n")
             }
                 /*return [`# Name:${alert.labels.alertname}`, "## Labels:"]
@@ -47,16 +50,16 @@ exports.template = function(body) {
                 .concat(`开始时间:${alert.startsAt}`)
                 .concat(`结束时间:${alert.endsAt}`)
                 .concat("------------------------------")
-                .join("\n \n<@李泽鑫>")
+                .join("\n")
             }
             
         }
     ).join("\n\n");
     return {
-        msgtype: "markdown",
-        markdown: {
+        msgtype: "text",
+        text: {
             "content": content
-            //"mentioned_mobile_list": [...new Set(noticeMem)]
+            "mentioned_mobile_list": [...new Set(noticeMem)]
         }
     }
 }
