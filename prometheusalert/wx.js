@@ -47,7 +47,7 @@ exports.template = function(body) {
                 .concat(`开始时间:${alert.startsAt}`)
                 .concat(`结束时间:${alert.endsAt}`)
                 .concat("------------------------------")
-                .join("\n \n<@18318851403>")
+                .join("\n \n<@李泽鑫>")
             }
             
         }
