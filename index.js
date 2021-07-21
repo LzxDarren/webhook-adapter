@@ -28,7 +28,7 @@ argv.forEach(arg => {
         );
     }
 });
-var noflag = ADAPTER_FLAG;
+/*var noflag = ADAPTER_FLAG;
 var index1 = noflag.indexOf('=');
 var index2 = noflag.indexOf('=', index1 + 1)
 var js = require(noflag.substring(0, index1));
@@ -39,7 +39,7 @@ settings.push(
         template: js.template,
         signUrl: js.signUrl || (url => url)
     }
-);
+);*/
 var app = express();
 app.use(bodyParser.json());
 settings.forEach(
