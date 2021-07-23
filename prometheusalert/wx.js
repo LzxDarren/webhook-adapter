@@ -13,7 +13,7 @@ exports.template = function(body) {
             }else if ((alert.labels.severity).search("三级告警") != -1){
                 noticeMem.push("17154862343");
                 if ((alert.labels.alertname).search("f0132618") != -1){
-                noticeMem.push("15879433425");
+                    noticeMem.push("15879433425");
                 }else if ((alert.labels.alertname).search("f0409069") != -1){
                     noticeMem.push("15879433425");
                 }else if ((alert.labels.alertname).search("f0747617") != -1){
@@ -29,7 +29,7 @@ exports.template = function(body) {
                 }
             }else if ((alert.labels.severity).search("四级告警") != -1){
                 if ((alert.labels.alertname).search("f0132618") != -1){
-                noticeMem.push("15879433425");
+                    noticeMem.push("15879433425");
                 }else if ((alert.labels.alertname).search("f0409069") != -1){
                     noticeMem.push("15879433425");
                 }else if ((alert.labels.alertname).search("f0747617") != -1){
