@@ -6,8 +6,6 @@ exports.template = function(body) {
     var noticeMem = [];
     var content = alerts.map(
         alert => {
-            if ((alert.label))
-            
             if ((alert.labels.alertname).search("f0132618") != -1){
                 noticeMem.push("15879433425");
             }else if ((alert.labels.alertname).search("f0409069") != -1){
