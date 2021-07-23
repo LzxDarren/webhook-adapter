@@ -9,10 +9,10 @@ const PORT_FLAG = "--port=";
 var ADAPTER_FLAG = process.env.ADAPTER;
 var settings = [];
 argv.forEach(arg => {
-    /*if (arg.startsWith(PORT_FLAG)) {
+    if (arg.startsWith(PORT_FLAG)) {
         port = parseInt(arg.substr(PORT_FLAG.length));
         return;
-    }*/
+    }
     if (arg.startsWith(ADAPTER_FLAG)) {
         var noflag = arg.substr(ADAPTER_FLAG.length)
         var index1 = noflag.indexOf('=');
