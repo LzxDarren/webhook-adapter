@@ -2,9 +2,12 @@ exports.template = function(body) {
     //企业微信群机器人API，https://work.weixin.qq.com/help?person_id=1&doc_id=13376#markdown%E7%B1%BB%E5%9E%8B
     //prometheus alert manager webhook ： https://prometheus.io/docs/alerting/configuration/#webhook_config
     var alerts = body.alerts;
+    console.log(alerts);
     var noticeMem = [];
     var content = alerts.map(
         alert => {
+            if ((alert.label))
+            
             if ((alert.labels.alertname).search("f0132618") != -1){
                 noticeMem.push("15879433425");
             }else if ((alert.labels.alertname).search("f0409069") != -1){
