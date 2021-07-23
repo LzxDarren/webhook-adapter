@@ -5,14 +5,14 @@ var argv = process.argv.slice(2);
 console.log(`111111111111${argv}`)
 var port = 8080;
 const PORT_FLAG = "--port=";
-const ADAPTER_FLAG = "--adapter=";
-//var ADAPTER_FLAG = process.env.ADAPTER;
+//const ADAPTER_FLAG = "--adapter=";
+var ADAPTER_FLAG = process.env.ADAPTER;
 var settings = [];
 argv.forEach(arg => {
-    if (arg.startsWith(PORT_FLAG)) {
+    /*if (arg.startsWith(PORT_FLAG)) {
         port = parseInt(arg.substr(PORT_FLAG.length));
         return;
-    }
+    }*/
     if (arg.startsWith(ADAPTER_FLAG)) {
         var noflag = arg.substr(ADAPTER_FLAG.length)
         var index1 = noflag.indexOf('=');
@@ -28,7 +28,7 @@ argv.forEach(arg => {
         );
     }
 });
-/*var noflag = ADAPTER_FLAG;
+var noflag = ADAPTER_FLAG;
 var index1 = noflag.indexOf('=');
 var index2 = noflag.indexOf('=', index1 + 1)
 var js = require(noflag.substring(0, index1));
@@ -39,7 +39,7 @@ settings.push(
         template: js.template,
         signUrl: js.signUrl || (url => url)
     }
-);*/
+);
 var app = express();
 app.use(bodyParser.json());
 settings.forEach(
