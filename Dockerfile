@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/lizexin/webhook-adapter-base:1.2
+FROM registry.cn-shanghai.aliyuncs.com/lizexin/webhook-adapter:1.3
 ADD index.js /app/
 ADD prometheusalert /app/prometheusalert
 EXPOSE 80
