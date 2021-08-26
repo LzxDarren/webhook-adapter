@@ -9,7 +9,22 @@ exports.template = function(body) {
             if ((alert.labels.severity).search("一级告警") != -1){
                 noticeMem.push("@all");
             }else if ((alert.labels.severity).search("二级告警") != -1){
-                noticeMem.push("@all");
+                noticeMem.push("17154862343");
+                if ((alert.labels.alertname).search("f0132618") != -1){
+                    noticeMem.push("15879433425");
+                }else if ((alert.labels.alertname).search("f0409069") != -1){
+                    noticeMem.push("15879433425");
+                }else if ((alert.labels.alertname).search("f0747617") != -1){
+                    noticeMem.push("18318851403");
+                }else if ((alert.labels.alertname).search("f0463143") != -1){
+                    noticeMem.push("15879433425");
+                }else if ((alert.labels.alertname).search("f020315") != -1){
+                    noticeMem.push("19520526881");
+                }else if ((alert.labels.alertname).search("f087530") != -1){
+                    noticeMem.push("15879433425");
+                }else if ((alert.labels.alertname).search("f0154039") != -1){
+                    noticeMem.push("15879433425");
+                }
             }else if ((alert.labels.severity).search("三级告警") != -1){
                 noticeMem.push("17154862343");
                 if ((alert.labels.alertname).search("f0132618") != -1){
