@@ -14,11 +14,11 @@ exports.template = function(body) {
                     noticeMem.push("15879433425");
                 }else if ((alert.labels.alertname).search("f0409069") != -1){
                     noticeMem.push("15879433425");
-                }else if ((alert.labels.alertname).search("f0747617") != -1){
+                }else if ((alert.labels.alertname).search("f0747617") != -1||alert.labels.alertname).search("t05316") != -1){
                     noticeMem.push("18318851403");
                 }else if ((alert.labels.alertname).search("f0463143") != -1){
                     noticeMem.push("15879433425");
-                }else if ((alert.labels.alertname).search("f020315") != -1){
+                }else if ((alert.labels.alertname).search("f020315") != -1||alert.labels.alertname).search("t019078") != -1){
                     noticeMem.push("19520526881");
                 }else if ((alert.labels.alertname).search("f087530") != -1){
                     noticeMem.push("15879433425");
@@ -30,11 +30,11 @@ exports.template = function(body) {
                     noticeMem.push("15879433425");
                 }else if ((alert.labels.alertname).search("f0409069") != -1){
                     noticeMem.push("15879433425");
-                }else if ((alert.labels.alertname).search("f0747617") != -1){
+                }else if ((alert.labels.alertname).search("f0747617") != -1||alert.labels.alertname).search("t05316") != -1){
                     noticeMem.push("18318851403");
                 }else if ((alert.labels.alertname).search("f0463143") != -1){
                     noticeMem.push("15879433425");
-                }else if ((alert.labels.alertname).search("f020315") != -1){
+                }else if ((alert.labels.alertname).search("f020315") != -1||alert.labels.alertname).search("t019078") != -1){
                     noticeMem.push("19520526881");
                 }else if ((alert.labels.alertname).search("f087530") != -1){
                     noticeMem.push("15879433425");
