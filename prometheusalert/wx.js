@@ -21,7 +21,7 @@ exports.template = function(body) {
                 }else if ((alert.labels.alertname).search("f020315") != -1||(alert.labels.alertname).search("t019078") != -1){
                     noticeMem.push("19520526881");
                 }else if ((alert.labels.alertname).search("f087530") != -1){
-                    noticeMem.push("15879433425");
+                    noticeMem.push("13428166619");
                 }else if ((alert.labels.alertname).search("f0154039") != -1){
                     noticeMem.push("15879433425");
                 }
@@ -37,7 +37,7 @@ exports.template = function(body) {
                 }else if ((alert.labels.alertname).search("f020315") != -1||(alert.labels.alertname).search("t019078") != -1){
                     noticeMem.push("19520526881");
                 }else if ((alert.labels.alertname).search("f087530") != -1){
-                    noticeMem.push("15879433425");
+                    noticeMem.push("13428166619");
                 }else if ((alert.labels.alertname).search("f0154039") != -1){
                     noticeMem.push("15879433425");
                 }
